@@ -8,7 +8,7 @@ object configInterfaz {
   }
   method seleccionarDificultad(){
       keyboard.d().onPressDo({
-        self.ponerDificultad(7,10)
+        self.ponerDificultad(7,5)
       })
       keyboard.f().onPressDo({
         self.ponerDificultad(5,5)
