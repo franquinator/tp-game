@@ -2,7 +2,7 @@ import personajes.*
 import config.*
 import tablero.*
 object enemigo{
-    const property personajes = ["","infanteria","arquero","monje"]
+    const property personajes = ["infanteria","arquero","monje"]
     var property maximoTropasEnemigo = 0
     method iniciar(){
         game.onTick(2500, "comportamiento", {self.ponerEnemigoAleatorio()})
@@ -10,7 +10,7 @@ object enemigo{
     method ponerEnemigoAleatorio(){
         const personaje = personajes.anyOne()
         if(tablero.tropas(equipoRojo).size() < maximoTropasEnemigo){
-            if(personaje == "Infanteria")
+            if(personaje == "infanteria")
                 tablero.agregarEntidad(new Infanteria(position = self.posicionAleatoriaEnemiga() ,equipo = equipoRojo))
             else if(personaje == "arquero")
                 tablero.agregarEntidad(new Arquero(position = self.posicionAleatoriaEnemiga() ,equipo = equipoRojo))
